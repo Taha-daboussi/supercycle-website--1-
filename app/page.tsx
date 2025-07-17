@@ -8,7 +8,24 @@ export default function Home() {
     <div className="min-h-screen relative overflow-hidden bg-black">
       {/* Animated Background */}
       <div className="absolute inset-0 w-full h-full opacity-50">
-        <Image src="/sc.gif" alt="Animated Background" fill className="object-cover" priority unoptimized />
+        {/* Mobile GIF (portrait) */}
+        <Image 
+          src="/sc-mobile.gif" 
+          alt="Animated Background" 
+          fill 
+          className="object-cover md:hidden" 
+          priority 
+          unoptimized 
+        />
+        {/* Desktop GIF (landscape) */}
+        <Image 
+          src="/sc.gif" 
+          alt="Animated Background" 
+          fill 
+          className="object-cover hidden md:block" 
+          priority 
+          unoptimized 
+        />
       </div>
 
       {/* Main Content Container */}
@@ -94,7 +111,7 @@ export default function Home() {
               className="w-12 h-9"
             />
             <div className="text-left">
-              <div className="text-sm font-bold leading-tight">Follow us on X!</div>
+              <div className="text-sm font-bold leading-tight"><b>Follow us on X!</b></div>
               <div className="text-xs font-semibold leading-tight">
                 <b>@supercycledotso</b>
               </div>
